@@ -1,5 +1,5 @@
 add_subdirectory(problem_15)
-# add_subdirectory(problem_16)
+add_subdirectory(problem_16)
 # add_subdirectory(problem_17)
 # add_subdirectory(problem_18)
 # add_subdirectory(problem_19)

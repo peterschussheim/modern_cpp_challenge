@@ -22,6 +22,16 @@ public:
   friend std::ostream& operator<<(std::ostream& os, const ipv4& ip);
   // read an ipv4 from is into a
   friend std::istream& operator>>(std::istream& is, ipv4& ip);
+
+  ipv4 operator++() // pre-increment
+  {
+    return ++(*this);
+  }
+
+  ipv4 operator--() // post-decrement
+  {
+    return --(*this);
+  }
 };
 
 //------------------------------------------------------------------------------
@@ -71,18 +81,11 @@ inline bool operator==(const ipv4& lhs, const ipv4& rhs)
   return true;
 }
 
-inline bool operator!=(const ipv4& lhs, const ipv4& rhs)
-{
-  return !(lhs == rhs);
-}
+inline bool operator!=(const ipv4& lhs, const ipv4& rhs) { return !(lhs == rhs); }
 
 //------------------------------------------------------------------------------
 
-std::ostream& operator<<(std::ostream& os, const ipv4& a)
-{
-  return os << a.data[0] << '.' << a.data[1] << '.' << a.data[2] << '.'
-            << a.data[3];
-}
+std::ostream& operator<<(std::ostream& os, const ipv4& a) { return os << a.data[0] << '.' << a.data[1] << '.' << a.data[2] << '.' << a.data[3]; }
 
 inline std::istream& operator>>(std::istream& is, ipv4& ip)
 {
@@ -101,6 +104,8 @@ inline std::istream& operator>>(std::istream& is, ipv4& ip)
   ip = ipv4{a, b, c, d}; // update a
   return is;
 }
+
+//------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------
 

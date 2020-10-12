@@ -3,7 +3,7 @@ BasedOnStyle: Microsoft
 ---
 Language: Cpp
 IndentWidth: 2
-ColumnLimit: 80
+ColumnLimit: 160
 UseTab: Never
 AccessModifierOffset: -2
 AlignTrailingComments: true

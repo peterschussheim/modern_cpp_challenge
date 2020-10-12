@@ -1,0 +1,3 @@
+add_executable(02_language_16_ipv4_enum main.cpp)
+set_property(TARGET 02_language_16_ipv4_enum PROPERTY CXX_STANDARD 20)
+set_property(TARGET 02_language_16_ipv4_enum PROPERTY CXX_STANDARD_REQUIRED ON)
